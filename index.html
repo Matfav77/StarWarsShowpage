@@ -10,38 +10,68 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e01a3e29b3.js" crossorigin="anonymous"></script>
-    <title>Filling dots</title>
+    <title>Star Wars challenge</title>
 </head>
 
 <body>
+    <main>
 
-    <div class="controls-and-stepper">
-        <div class="controls">
-            <i class="fa-solid fa-arrow-left inactive-arrow"></i>
-            <i class="fa-solid fa-arrow-right"></i>
+        <div class="visuals">
+            <div class="info">
+                <div class="description">
+                    <i class="fa-brands fa-galactic-republic" data-slide="2"></i>
+                    <!-- <i class="fa-solid fa-jedi" data-slide="3"></i> -->
+                    <h1 data-slide="1">Un nouvel espoir</h1>
+                    <!-- <h1 data-slide="2">L'empire contre-attaque</h1> -->
+                    <!-- <h1 data-slide="3">Le retour du Jedi</h1> -->
+                    <p data-slide="1">C'est le premier opus de la saga Star Wars par sa date de sortie, mais le
+                        quatrième selon l'ordre
+                        chronologique de l'histoire.</p>
+                    <!-- <p data-slide="2">La guerre entre le maléqiue Empire galactique et son antagoniste, l'Alliance
+                        rebelle, bat son plein.</p>
+                    <p data-slide="3">Le maléfique Empire galactique construit une nouvelle station spatiale Etoile de
+                        la mort pour anéantir définitivement l'Alliance rebelle.</p> -->
+                </div>
+                <span class="year">19<span data-slide="1">77</span>
+                    <!-- <span data-slide="2">80</span>
+                    <span data-slide="3">83</span> -->
+                </span>
+            </div>
+            <div class="images">
+                <div class="image" data-slide="1"></div>
+                <!-- <div class="image" data-slide="2"></div>
+                <div class="image" data-slide="3"></div> -->
+            </div>
         </div>
-        <div class="stepper">
-            <div class="step first-step active">
-                <div class="dot"></div>
+
+        <div class="controls-and-stepper">
+            <div class="controls">
+                <i class="fa-solid fa-arrow-left inactive-arrow"></i>
+                <i class="fa-solid fa-arrow-right"></i>
             </div>
-            <div class="step">
-                <div class="line"></div>
-                <div class="dot"></div>
-            </div>
-            <div class="step">
-                <div class="line"></div>
-                <div class="dot"></div>
-            </div>
-            <div class="step">
-                <div class="line"></div>
-                <div class="dot"></div>
-            </div>
-            <div class="step">
-                <div class="line"></div>
-                <div class="dot"></div>
+            <div class="stepper">
+                <div class="step first-step active">
+                    <div class="dot"></div>
+                </div>
+                <div class="step">
+                    <div class="line"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="step">
+                    <div class="line"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="step">
+                    <div class="line"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="step">
+                    <div class="line"></div>
+                    <div class="dot"></div>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <script src="./app.js"></script>
 </body>

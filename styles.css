@@ -15,6 +15,74 @@ body {
     font-family: Montserrat, sans-serif;
 }
 
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.visuals {
+    color: rgb(241, 239, 127);
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+}
+
+.description {
+    font-size: 1em;
+}
+
+.fa-brands,
+.fa-solid {
+    font-size: 4em;
+}
+
+.year {
+    font-size: 12em;
+}
+
+.images {
+    height: 600px;
+    width: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image:nth-of-type(1) {
+    background-image: url('./images/newHope.png');
+}
+
+.image:nth-of-type(2) {
+    background-image: url('./images/empireStrikesBack.png');
+    left: 150%;
+}
+
+.image:nth-of-type(3) {
+    background-image: url('./images/returnJedi.png');
+    left: 150%;
+}
+
+img {
+    width: 100%;
+}
+
 .controls-and-stepper {
     width: 100%;
     display: flex;
@@ -22,7 +90,7 @@ body {
 }
 
 .controls {
-    width: 10%;
+    flex-grow: 1;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -41,7 +109,7 @@ body {
 }
 
 .stepper {
-    width: 85%;
+    flex-grow: 9;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -113,4 +181,14 @@ body {
 .active>.line::after {
     transform: scaleX(100%);
     transition: transform 300ms ease-in-out 0s;
+}
+
+.image.slide-left {
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 300ms ease-in-out 300ms;
+}
+
+.image.slide-right {
+    transform: translate3d(100%, 0, 0);
+    transition: transform 300ms ease-in-out 300ms;
 }
