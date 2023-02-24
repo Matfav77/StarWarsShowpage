@@ -43,8 +43,35 @@ main {
     font-size: 4em;
 }
 
+.titles {
+    position: relative;
+    height: 2.2em;
+    margin: .5em 0;
+}
+
+.titles h1 {
+    font-size: 2em;
+    position: absolute;
+    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.summaries {
+    position: relative;
+    height: 3.5em;
+}
+
+.summaries p {
+    position: absolute;
+    font-size: 1em;
+    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
 .year {
     font-size: 12em;
+}
+
+.changing-year {
+    position: absolute;
 }
 
 .images {
@@ -80,16 +107,6 @@ main {
 
 img {
     width: 100%;
-}
-
-.image.send-left {
-    transform: translate3d(-100%, 0, 0);
-    transition: transform 300ms ease-in-out;
-}
-
-.image.send-right {
-    transform: translate3d(100%, 0, 0);
-    transition: transform 300ms ease-in-out;
 }
 
 .controls-and-stepper {
@@ -190,4 +207,26 @@ img {
 .active>.line::after {
     transform: scaleX(100%);
     transition: transform 150ms ease-in-out 0s;
+}
+
+.send-left {
+    transform: translate3d(-20%, 0, 0);
+    opacity: 0;
+    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.send-right {
+    transform: translate3d(20%, 0, 0);
+    opacity: 0;
+    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.send-image-left {
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 300ms ease-in-out;
+}
+
+.send-image-right {
+    transform: translate3d(100%, 0, 0);
+    transition: transform 300ms ease-in-out;
 }

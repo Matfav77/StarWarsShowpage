@@ -22,8 +22,14 @@ right.addEventListener('click', () => {
     if (lastActivatedStep === 2) return;
     lastActivatedStep++;
     steps[lastActivatedStep].classList.toggle('active');
-    slides[lastActivatedStep - 1][4].classList.add('send-left');
-    slides[lastActivatedStep][4].classList.remove('send-right');
+    slides[lastActivatedStep - 1].forEach((el, index) => {
+        if (index === 4) return el.classList.add('send-image-left')
+        return el.classList.add('send-left');
+    });
+    slides[lastActivatedStep].forEach((el, index) => {
+        if (index === 4) return el.classList.remove('send-image-right')
+        el.classList.remove('send-right');
+    });
     left.classList.remove('inactive-arrow');
     if (lastActivatedStep === 2) right.classList.add('inactive-arrow');
 })
@@ -31,8 +37,14 @@ right.addEventListener('click', () => {
 left.addEventListener('click', () => {
     if (lastActivatedStep === 0) return;
     steps[lastActivatedStep].classList.toggle('active');
-    slides[lastActivatedStep - 1][4].classList.remove('send-left');
-    slides[lastActivatedStep][4].classList.add('send-right');
+    slides[lastActivatedStep - 1].forEach((el, index) => {
+        if (index === 4) return el.classList.remove('send-image-left')
+        return el.classList.remove('send-left');
+    });
+    slides[lastActivatedStep].forEach((el, index) => {
+        if (index === 4) return el.classList.add('send-image-right')
+        el.classList.add('send-right');
+    });
     right.classList.remove('inactive-arrow');
     lastActivatedStep--;
     if (lastActivatedStep === 0) return left.classList.add('inactive-arrow');
