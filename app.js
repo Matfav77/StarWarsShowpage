@@ -14,8 +14,6 @@ const slide3 = [
 
 const slides = [slide1, slide2, slide3];
 
-console.log(slides);
-
 let lastActivatedStep = 0;
 
 right.addEventListener('click', () => {
