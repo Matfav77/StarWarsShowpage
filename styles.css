@@ -99,7 +99,7 @@ main {
 }
 
 .first-image {
-    background-image: url('./images/newHope.png');
+    background-image: url('./images/newHope.webp');
 }
 
 .second-image {
@@ -108,7 +108,7 @@ main {
 }
 
 .third-image {
-    background-image: url('./images/returnJedi.png');
+    background-image: url('./images/returnJedi.webp');
     z-index: -2;
 }
 
