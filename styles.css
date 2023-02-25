@@ -75,6 +75,8 @@ main {
 
 .year {
     font-size: 12em;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: bold;
 }
 
 .changing-year {
